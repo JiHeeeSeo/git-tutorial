@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\서지희\OneDrive - 강원대학교\대학\WorkSpace\C++\class101\chap02\Project2\Project2\main.cpp(36,24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Project2.vcxproj -> C:\Users\서지희\OneDrive - 강원대학교\대학\WorkSpace\C++\class101\chap02\Project2\Debug\Project2.exe
