@@ -1,8 +1,14 @@
 #include "Header.h"
+#include "GameEngine.h"
+#include "Display.h"
+
 
 #define INTERVAL 1.0/60.0
 
+int displayData[GRID_HEIGHT][GRID_WIDTH] = { 0, };
+
 int main() {
+	
 	srand(time(0));
 
 	float prev = (float)clock() / CLOCKS_PER_SEC;
