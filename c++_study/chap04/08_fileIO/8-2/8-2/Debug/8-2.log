@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\서지희\OneDrive - 강원대학교\대학\WorkSpace\study\c++_study\chap04\08_fileIO\8-2\8-2\Source.cpp(22,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\서지희\OneDrive - 강원대학교\대학\WorkSpace\study\c++_study\chap04\08_fileIO\8-2\8-2\Source.cpp(33,21): warning C4018: '<': signed/unsigned mismatch
+  8-2.vcxproj -> C:\Users\서지희\OneDrive - 강원대학교\대학\WorkSpace\study\c++_study\chap04\08_fileIO\8-2\Debug\8-2.exe
