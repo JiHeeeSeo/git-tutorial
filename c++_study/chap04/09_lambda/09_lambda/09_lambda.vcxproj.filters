@@ -18,5 +18,11 @@
     <ClCompile Include="LambdaEx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Lambda2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BindEx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
