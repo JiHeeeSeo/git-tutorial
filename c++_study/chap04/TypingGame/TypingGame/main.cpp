@@ -3,8 +3,7 @@
 
 int main() {
 	TypingSystem* s = new TypingSystem();
-	s->loadData();
-	s->printData();
+	s->start();
 
 	char buff[100];
 

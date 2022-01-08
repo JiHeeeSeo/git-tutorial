@@ -142,11 +142,13 @@
     <ClInclude Include="Header.h" />
     <ClInclude Include="TypingGameHelper.h" />
     <ClInclude Include="TypingSystem.h" />
+    <ClInclude Include="User.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="TypingGameHelper.cpp" />
     <ClCompile Include="TypingSystem.cpp" />
+    <ClCompile Include="User.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
