@@ -1,6 +1,6 @@
 #include "User.h"
 
-User::User(const std::string& username){
+User::User(const std::string& username) {
 	this->username = username;
 
 	FILE* fp = fopen(username.c_str(), "r");
@@ -23,7 +23,6 @@ User::User(const std::string& username){
 		fgetc(stdin);
 	}
 
-	fclose(fp);
 }
 
 void User::save(){

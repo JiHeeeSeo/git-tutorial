@@ -5,7 +5,7 @@ void TypingSystem::loadData(){
 
 	for (;;) {
 		if (feof(infile) == 1) break;
-		char line[512];
+		char line[512] = { 0, };
 		fscanf(infile, "%511[^\n]s", line);
 		fgetc(infile);
 		sentences.push_back(line);
@@ -42,6 +42,9 @@ void TypingSystem::start(){
 			// 로그아웃을 진행
 			delete currentUser;
 			currentUser = nullptr;
+		}
+		else if (input == '2' && currentUser != nullptr) {
+			typingStart();
 		}
 		else if (input == '3' && currentUser != nullptr) {
 			currentUser->printUserInfo();
@@ -82,4 +85,70 @@ std::string TypingSystem::getString(){
 	scanf("%99[^\n]s", input);
 
 	return input;
+}
+
+void TypingSystem::typingStart(){
+	float types_per_min = 0.0f;
+	for (int i = 0; i < 5; i++) {
+		clear();
+
+		// sprintf를 위해서 만들어둔 배열
+		// 지속적으로 사용될 것 같음
+		char buff[128];
+
+		// 상단에 분당 타수를 출력합니다
+		sprintf(buff, "분당 타수: %.2f / 평균 타수: %.2f", types_per_min, currentUser->avgSpeed);
+		putStringOnPosition(6, 5, buff);
+
+		float start = (float)clock() / CLOCKS_PER_SEC;
+		
+		int target = rand() % sentences.size();
+		sprintf(buff, "문장: %s", sentences[target].c_str());
+		putStringOnPosition(6, 6, buff);
+
+		// 문자열을 사용자로부터 입력받는 곳
+		putStringOnPosition(6, 7, "입력: ");
+		std::string input = getString();
+
+		float end = (float)clock() / CLOCKS_PER_SEC;
+
+		float delta = end - start;
+
+		// 입력된 문자열과, 해당 문자열의 일치율
+		// 입력 속도를 계산해서 출력
+
+		// 분당 타수 계산
+		types_per_min = sentences[target].size() / delta * 60;
+		
+		int matches = compare(sentences[target], input);
+		float match_ratio = (float)matches / sentences[target].size();
+
+		types_per_min = types_per_min * match_ratio;
+		
+		// 타이핑 카운트 계산
+		currentUser->typingCount++;
+		currentUser->avgSpeed = (currentUser->avgSpeed * ((float)currentUser->typingCount - 1.0) + types_per_min) / (float)currentUser->typingCount;
+		
+
+	}
+
+	currentUser->save();
+	putStringOnPosition(6, 8, "연습이 종료되었습니다");
+	putStringOnPosition(6, 9, "계속하려면 엔터키를 눌러주세요");
+	fseek(stdin, 0, SEEK_END);
+	fgetc(stdin);
+}
+
+int TypingSystem::compare(const std::string& original, const std::string& input){
+	int count = 0;
+
+	int size = original.size() < input.size() ? original.size() : input.size();
+
+	for (int i = 0; i < size; i++) {
+		if (original.at(i) == input.at(i)) {
+			count++;
+		}
+	}
+
+	return count;
 }

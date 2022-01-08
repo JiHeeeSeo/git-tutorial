@@ -25,6 +25,10 @@ public:
 	char getChar();
 
 	std::string getString();
+
+	void typingStart();
+	
+	int compare(const std::string& original, const std::string& input);
 };
 
 #endif // !__TYPEING_SYSTEM_H__
