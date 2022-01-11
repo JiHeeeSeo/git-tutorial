@@ -38,7 +38,7 @@ Rectangle::~Rectangle(){}
 
 // 접근자 멤버 함수 Print
 void Rectangle::print() const {
-	cout << "사각혀의 너비: " << length << ", 높이: " << height << endl;
+	cout << "사각형의 너비: " << length << ", 높이: " << height << endl;
 }
 
 // 접근자 멤버 함수 Get area
@@ -58,4 +58,22 @@ int main() {
 	Rectangle rect2(5.1, 10.2);		// 매개변수가 있는 생성자 사용
 	Rectangle rect3(rect2);			// 복사 생성자 사용
 
+	// 첫 번째 객체의 멤버 함수를 호출
+	cout << "사각형1: ";
+	rect1.print();
+	cout << "넓이: " << rect1.getArea() << endl;
+	cout << "둘레: " << rect1.getPerimeter() << endl << endl;
+
+	// 두 번째 객체의 멤버 함수를 호출
+	cout << "사각형2: ";
+	rect2.print();
+	cout << "넓이: " << rect2.getArea() << endl;
+	cout << "둘레: " << rect2.getPerimeter() << endl << endl;
+
+	// 세 번째 객체의 멤버 함수를 호출
+	cout << "사각형3: ";
+	rect3.print();
+	cout << "넓이: " << rect3.getArea() << endl;
+	cout << "둘레: " << rect3.getPerimeter() << endl << endl;
+	return 0;
 }
