@@ -1,4 +1,4 @@
-/* Fraction Å¬·¡½º¸¦ Á¤ÀÇÇÏ´Â fraction.h ÀÎÅÍÆäÀÌ½º ÆÄÀÏ */
+ï»¿/* Fraction í´ë˜ìŠ¤ë¥¼ ì •ì˜í•˜ëŠ” fraction.h ì¸í„°í˜ì´ìŠ¤ íŒŒì¼ */
 #include <iostream>
 using namespace std;
 
@@ -6,24 +6,24 @@ using namespace std;
 #define FRACTION_H
 
 class Fraction {
-	// µ¥ÀÌÅÍ¸â¹ö
+	// ë°ì´í„°ë©¤ë²„
 private:
 	int numer;
 	int denom;
 	void normalize();
 	int gcd(int n, int m);
-	// public ¸â¹ö ÇÔ¼ö
+	// public ë©¤ë²„ í•¨ìˆ˜
 public:
-	// »ı¼ºÀÚ
+	// ìƒì„±ì
 	Fraction(int num, int den);
 	Fraction();
 	Fraction(const Fraction& fract);
 	~Fraction();
-	// Á¢±ÙÀÚ
+	// ì ‘ê·¼ì
 	int getNumer() const;
 	int getDenom() const;
 	void print() const;
-	// ¼³Á¤ÀÚ
+	// ì„¤ì •ì
 	void setNumer(int num);
 	void setDenom(int den);
 
