@@ -33,7 +33,7 @@ void Time::tick(){
 
 /* normalize 함수는 불변 속성을 확인
 불변 속성에 문제가 있는 경우 프로그램을 중단
-괜찮다면 시, 분, 초를 올림*/
+괜찮다면 시, 분, 초를 올림 */
 void Time::normalize() {
 	// 음수 처리
 	if ((hours < 0) || (minutes < 0) || (seconds < 0)) {
