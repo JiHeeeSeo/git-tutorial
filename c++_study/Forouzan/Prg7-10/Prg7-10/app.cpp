@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-	// 객체 인스턴스화
+	// 객체 인스턴스화 하기
 	Fraction fract1;
 	Fraction fract2(14, 21);
 	Fraction fract3(11, -8);
