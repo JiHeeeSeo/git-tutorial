@@ -1,7 +1,0 @@
-﻿  TypingSystem.cpp
-C:\Users\서지희\OneDrive - 강원대학교\대학\WorkSpace\study\c++_study\chap04\TypingGame\TypingGame\TypingSystem.cpp(19,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\서지희\OneDrive - 강원대학교\대학\WorkSpace\study\c++_study\chap04\TypingGame\TypingGame\TypingSystem.cpp(130,109): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  main.cpp
-C:\Users\서지희\OneDrive - 강원대학교\대학\WorkSpace\study\c++_study\chap04\TypingGame\TypingGame\main.cpp(5,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
-  TypingGame.vcxproj -> C:\Users\서지희\OneDrive - 강원대학교\대학\WorkSpace\study\c++_study\chap04\TypingGame\Debug\TypingGame.exe
