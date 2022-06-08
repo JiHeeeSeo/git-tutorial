@@ -21,23 +21,22 @@ int main() {
 
 
 void recu(int i, int k, int n) {
-	int div = n / 3;
 
-	if (div == 3) {
+	if (n == 3) {
 
-		if (i%3 == 2 && k%3 == 2) {
-			printf(" ");
-		}
-		else
+	}
+
+
+	// ctl+shift+/
+	/*if (i == (1+n/3) && k==(1+n/3)) {
+		printf(" ");
+	}
+	else {
+		if (n == 3)
 			printf("*");
-		return;
-	}
+		else
+			recu(i, k, n / 3);
+	}*/
 	
-	if (i == (div * 4 + 1) && k==(div*4+1)) {
-		
-	}
-	else
-		recu(i, k, div);
-
 }
 
