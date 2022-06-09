@@ -24,19 +24,22 @@ void recu(int i, int k, int n) {
 
 	if (n == 3) {
 
+		if (i % 3 == 2 && k % 3 == 2) {
+			printf(" ");
+		}
+		else
+			printf("*");
+		return;
 	}
 
-
-	// ctl+shift+/
-	/*if (i == (1+n/3) && k==(1+n/3)) {
+	
+	if ((i%n>=(1+n/3) && i%n<= 2*(n/3)) && (k%n >= (1 + n / 3) && k%n <= 2 * (n / 3))) {
+		// 퍼센트를 해줘야 나머지 부분도 공백이 들어감	
 		printf(" ");
 	}
 	else {
-		if (n == 3)
-			printf("*");
-		else
-			recu(i, k, n / 3);
-	}*/
+		recu(i, k, n / 3);
+	}
 	
 }
 
